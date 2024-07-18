@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search products..." />
+        <button onclick="applyFilters()">Search</button>
+      </div>
+      <div class="filter-container">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="all">All</option>
+        </select>
+        <label for="price-filter">Price:</label>
+        <select id="price-filter">
+          <option value="all">All</option>
+          <option value="0-50">0 - 50</option>
+          <option value="51-100">51 - 100</option>
+          <option value="101-150">101 - 150</option>
+          <option value="151-200">151 - 200</option>
+          <option value="200+">200+</option>
+        </select>
+        <button class="filter-btn" onclick="applyFilters()">
+          Apply Filters
+        </button>
+      </div>
+    </div>
+    <div class="cart-container">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <div class="cart-total">
+        <p id="cart-total"></p>
+        <p id="cart-total-quantity"></p>
+      </div>
+    </div>
+    <div class="products-container" id="products-container"></div>
+    <div class="pagination" id="pagination-container"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
